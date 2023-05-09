@@ -6,6 +6,9 @@ class School:
     def admit_student(self, student): #зарахування студентів
         self.students.append(student)
         print(f'{student.name} був доданий до школи {self.name}') #дописати, коли створимо клас студентів
+    def expel_student(self, student):
+        """expelled_student ="""
+        pass
 
 class Student:
     def __init__(self, name, grade):
@@ -19,4 +22,8 @@ class Student:
         print(f'{self.name} був понижений {self.grade}')
     def __str__(self):
         return f'{self.name} - Ранг {self.grade}'
+
+
+multiply = lambda x, y: x * y
+print(multiply(2, 5))
 
