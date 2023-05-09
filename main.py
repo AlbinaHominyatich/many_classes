@@ -11,3 +11,10 @@ class Student:
     def __init__(self, name, grade):
         self.name = name
         self.grade = grade
+    def promote(self):
+        self.grade +=  1
+        print(f'{self.name} був підвищений {self.grade}')
+    def demote(self):
+        self.grade -=  1
+        print(f'{self.name} був понижений {self.grade}')
+
