@@ -3,6 +3,7 @@ class School:
     def __init__(self, name, students):
         self.name = name
         self.students = students #список студентів
+        self.teachers = [] #1 завдання
     def admit_student(self, student): #зарахування студентів
         self.students.append(student)
         print(f'{student.name} був доданий до школи {self.name}') #дописати, коли створимо клас студентів
@@ -14,6 +15,9 @@ class School:
             print(f'{expelled_student.name} був видалений з {self.name}')
         else:
             print(f'{student.name} не був знайдений {self.name}')
+    #1 завдання
+    def add_teacher(self, teacher):
+        self.teachers.append(teacher)
 
 
 class Student:
@@ -44,4 +48,10 @@ my_school.expel_student(Student("Alisa", 6))
 print("Оновлення")
 for student in my_school.students:
     print(student)
-
+#Практична робота
+#перше завдання
+class Teacher:
+    def __init__(self, name, subject, classes):
+        self.name = name
+        self.subject = subject
+        self.classes = classes
